@@ -12,7 +12,7 @@
 - [x] Write script for open additional.zip
 #### Additional tasks
 - [ ] Add log rotation for supervisor and dpkg files at /var/log/ directory.
-- [ ] Write down a little program that is able to show up your public IP.
+- [x] Write down a little program that is able to show up your public IP.
 - [ ] The result of this program execution should be available at 'internship.macpaw.io/ip'.
 
 ## What use:
