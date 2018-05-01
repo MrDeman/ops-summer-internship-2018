@@ -17,7 +17,7 @@
 
 ## What use:
 Future..
-## Preconditionals:
+## Preconditions:
 * [Docker](https://www.docker.com/docker-ubuntu) - Container manager.
 * [GNU Make](https://www.gnu.org/) - is a build automation tool that automatically builds executable programs.
 * [Python Pip](https://packaging.python.org/tutorials/installing-packages/#ensure-you-can-run-pip-from-the-command-line) - python package manager.
