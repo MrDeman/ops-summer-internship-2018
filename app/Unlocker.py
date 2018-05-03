@@ -12,7 +12,7 @@ import zipfile
 #                                               #
 #***********************************************#
 
-logfile = '/var/log/nginx/old.log'
+logfile = '/app/old.log'
 
 indexPattern = r"remote_addr=[8]\W[8]\W[8]\W[8]"
 goodStatus = r"status=[2][0][0]"
@@ -65,6 +65,6 @@ print('Third number is: {0}'.format(thirdNumber))
 password = str(firstNumber + secondNumber + thirdNumber)
 print('Password is:', password)
 
-with zipfile.ZipFile('tmp/additional.zip', 'r') as zip:
+with zipfile.ZipFile('/tmp/additional.zip', 'r') as zip:
     with zip.open('tmp/internship-additional', pwd=password.encode('cp850', 'replace')) as file:
         print(file.read())

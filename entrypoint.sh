@@ -1,17 +1,14 @@
 #!/bin/bash
 set -e
 
-echo ** ** **            
-./app/Unlocker.py
-echo ** ** **
-./app/ip.py
-echo ** ** **
-chmod 0644 /etc/logrotate.d/logrotate.conf
-logrotate -d /etc/logrotate.d/ ; logrotate -v -f /etc/logrotate.d/
-apt install -y python3 nano logrotate
-pip install feedparser requests flask
+cp /var/log/nginx/old.log /app
 
-   
+chmod 0644 /etc/logrotate.d/logrotate.conf
+logrotate -v --force /etc/logrotate.d/logrotate.conf
+
+/app/Unlocker.py
+/app/ip.py
+
 # Get the maximum upload file size for Nginx, default to 0: unlimited
 USE_NGINX_MAX_UPLOAD=${NGINX_MAX_UPLOAD:-0}
 # Generate Nginx config for maximum upload file size
