@@ -16,7 +16,9 @@
 - [x] The result of this program execution should be available at 'internship.macpaw.io/ip'.
 
 ## What use:
-Future..
+GIT; GNU Make; Python3; Python2.7; Flask; feedparser; requests; nano; logrotate; bash; Docker; HTML5; nginx; wsgi; etc..
+
+When I make this complex of tasks I used three books: "Pro Git book, written by Scott Chacon and Ben Straub", "Dmitry Aivaliotis - Nginx Server Administration", "Using Docker - O'Reilly Media"
 ## Preconditions:
 * [Docker](https://www.docker.com/docker-ubuntu) - Container manager.
 * [GNU Make](https://www.gnu.org/) - is a build automation tool that automatically builds executable programs.
