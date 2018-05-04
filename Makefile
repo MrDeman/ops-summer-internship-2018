@@ -34,6 +34,10 @@ start:		##(Debug) Start $(CONTAINER)
 stop: 		##(Debug) Stop current container process after 5 seconds after it was close
 	 @docker stop --time 5 $(CONTAINER)
 
+.PHONY:  logs
+logs: 		##(Debug) Show container's logs
+	 @docker logs $(CONTAINER)
+
 .PHONY: author
 author:		## Download info about author (pdf from Google Drive)
 	 @curl -L -o authorinfo.pdf "https://drive.google.com/uc?export=download&id=1AXFj60uGDEZvRfMs35-kLhYU9YEDvTVd"
