@@ -25,7 +25,7 @@ When I make this complex of tasks I used three books: "Pro Git book, written by 
 * [Python Pip](https://packaging.python.org/tutorials/installing-packages/#ensure-you-can-run-pip-from-the-command-line) - python package manager.
 
 ## Usage:
-
+Simple way (Recommended):
 ```sh
 $ git clone git@github.com:MrDeman/ops-summer-internship-2018.git # Clone repository
 $ cd /ops-summer-internship-2018 # Go to local repository
@@ -35,6 +35,17 @@ $ make # Configure and run container
 For cleaning environment:
 ```sh
 $ make rm # Remove container 'internship'
+```
+Not simple way (Not recommended):
+```sh
+$ git clone git@github.com:MrDeman/ops-summer-internship-2018.git # Clone repository
+$ cd /ops-summer-internship-2018 # Go to local repository
+$ docker build --tag macpaw/internship .
+$ docker run --publish 80:80 --name internship --detach macpaw/internship
+```
+For cleaning environment:
+```sh
+$ docker rm --force internship
 ```
 
 ## License
